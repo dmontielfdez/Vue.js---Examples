@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+<div id="app">
+    <input type="text" v-model="message" placeholder="Edit me">
+    <p>Message is: {{ message }}</p>
+
+    <input type="text" v-model="user.name" placeholder="Enter your name">
+    <input type="text" v-model="user.age" placeholder="Enter your age">
+
+    <p>Your name is {{user.name}} and your age is {{user.age}} years old</p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: "",
+            user: {
+                name: "",
+                age: ""
+            }
+        }
+    })
+
+</script>
+
+</body>
+</html>
