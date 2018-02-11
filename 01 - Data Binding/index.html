@@ -5,19 +5,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>01 - Data Binding</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 
-<div id="app">
-    <input type="text" v-model="message" placeholder="Edit me">
-    <p>Message is: {{ message }}</p>
+<div id="app" class="container">
+    <h1>01 - Data Binding</h1>
+    <input type="text" v-model="message" placeholder="Edit me" class="form-control">
+    <p>Message is: <strong>{{ message }}</strong></p>
 
-    <input type="text" v-model="user.name" placeholder="Enter your name">
-    <input type="text" v-model="user.age" placeholder="Enter your age">
+    <div class="form-group">
+        <label for="name">Your name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" v-model="user.name">
+    </div>
+    <div class="form-group">
+        <label for="age">Your age:</label>
+        <input type="text" class="form-control" id="age" placeholder="Enter your age" v-model="user.age">
+    </div>
 
-    <p>Your name is {{user.name}} and your age is {{user.age}} years old</p>
+    <p>Your name is <strong>{{user.name}}</strong> and your age is <strong>{{user.age}}</strong> years old</p>
 </div>
 
 <script>
